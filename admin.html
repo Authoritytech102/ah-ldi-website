@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AH-LDI Admin Dashboard</title><link rel="stylesheet" href="admin.css"></head>
+<body>
+<header><div><b>AH-LDI ADMIN</b><small>Civil Guards Nigeria Content Management</small></div><a href="index.html">View Website</a></header>
+<main>
+<div class="notice"><b>How this works:</b> This dashboard is designed for a free Supabase backend. Until you connect your Supabase project in <code>config.js</code>, the public site runs in demo mode. Do not put private/service-role keys in browser files.</div>
+<section class="panel"><h2>Dashboard Setup</h2><p>1. Create a free Supabase project. 2. Run <code>supabase_schema.sql</code> in Supabase SQL Editor. 3. Put the project URL and anon/publishable key in <code>config.js</code>. 4. Open this page and sign in.</p><div id="connection"></div></section>
+<section class="panel" id="auth-panel"><h2>Admin Sign In</h2><form id="login"><input id="email" type="email" placeholder="Admin email" required><input id="password" type="password" placeholder="Password" required><button>Sign In</button></form><p id="auth-msg"></p></section>
+<section class="panel hidden" id="dashboard">
+<div class="dash-top"><div><h2>Content Manager</h2><p>Manage public website content from one place.</p></div><button id="logout">Sign Out</button></div>
+<div class="tabs"><button data-tab="news">News</button><button data-tab="events">Events</button><button data-tab="courses">Courses</button><button data-tab="leadership">Leadership</button><button data-tab="units">Units</button><button data-tab="downloads">Downloads</button><button data-tab="gallery">Gallery</button><button data-tab="contact">Contact</button><button data-tab="applications">Membership Applications</button></div>
+<div id="manager"></div>
+</section>
+</main>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>
